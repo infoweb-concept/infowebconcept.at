@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dienstleistungen - InfoWebConcept</title>
+<link rel="icon" type="image/png" sizes="32x32" href="FavIcon/favicon.ico">
+<style>
+  body { font-family: "Segoe UI", Tahoma, sans-serif; background: #fff; color: #222; margin:0; padding:0; line-height:1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  /* Header */
+  header {
+    background: #000;
+    color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand { font-size: 2rem; font-weight: bold; letter-spacing: 1px; }
+  nav ul { list-style: none; display: flex; gap: 25px; }
+  nav a { padding: 10px 16px; border-radius: 8px; font-weight: 500; transition: all 0.3s;}
+  nav a:hover { background: #3cb371; color: #fff; }
+
+  /* Main Content */
+  main { max-width: 1000px; margin: 100px auto; padding: 0 30px; }
+  h1 { font-size: 3rem; text-align: center; color: #000; margin-bottom: 60px; }
+  p { font-size: 1.1rem; color: #555; margin-bottom: 20px; }
+
+  /* Services List */
+  .services { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+  .service {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+  }
+  .service:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+  .service h3 { margin-bottom: 15px; color: #000; font-size: 1.5rem; }
+  .service p { font-size: 1rem; color: #555; margin-bottom: 10px; }
+  .service .price { font-weight: bold; font-size: 1.2rem; color: #3cb371; }
+
+  /* Footer */
+  footer { background: #000; color: #fff; text-align: center; padding: 40px 20px; margin-top: 60px; }
+  footer a { color: #3cb371; margin: 0 10px; transition: color 0.3s; }
+  footer a:hover { color: #e63946; }
+
+  @media(max-width:900px) { .services { flex-direction: column; align-items: center; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">InfoWebConcept</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ÜberUnsweb.html">Über uns</a></li>
+      <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+      <li><a href="ProjektWeb.html">Projekte</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Unsere Dienstleistungen</h1>
+  <div class="services">
+
+    <div class="service">
+      <h3>Beratung per E-Mail</h3>
+      <p>Wir beantworten Ihre Fragen und beraten Sie für Strukturideen ihres Codes direkt per E-Mail.</p>
+      <p class="price">0€</p>
+    </div>
+
+    <div class="service">
+      <h3>Überprüfung mit Fehlerkorrektur</h3>
+      <p>Wir prüfen ihren Code (HTML, CSS, JavaScript), Webseiten oder Konzepte und korrigieren, falls vorhandene Fehler enthalten sind.</p>
+      <p class="price">4,99€</p>
+    </div>
+
+    <div class="service">
+      <h3>Webseiten erstellen</h3>
+      <p>Wir erstellen professionelle Webseiten nach Ihren Vorstellungen – vom kleinen Projekt bis zum größeren Webauftritt.</p>
+      <p class="price">80€ – 750€</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 InfoWebConcept. Alle Rechte vorbehalten.</p>
+  <p><a href="ImpressumWeb.html">Impressum</a> | <a href="DatenschutzWeb.html">Datenschutz</a> | <a href="index.html">Home</a></p>
+</footer>
+
+</body>
+</html>

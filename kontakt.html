@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt - InfoWebConcept</title>
+<link rel="icon" type="image/png" sizes="32x32" href="FavIcon/favicon.ico">
+<style>
+  body { font-family: "Segoe UI", Tahoma, sans-serif; background: #fff; color: #222; margin:0; padding:0; line-height:1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  header {
+    background: #000;
+    color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand { font-size: 2rem; font-weight: bold; letter-spacing: 1px; }
+  nav ul { list-style: none; display: flex; gap: 25px; }
+  nav a { padding: 10px 16px; border-radius: 8px; font-weight: 500; transition: all 0.3s;}
+  nav a:hover { background: #3cb371; color: #fff; }
+
+  main { max-width: 900px; margin: 100px auto; padding: 0 30px; }
+  h1 { font-size: 3rem; color: #000; margin-bottom: 40px; text-align: center; }
+  p { font-size: 1.1rem; color: #555; margin-bottom: 30px; text-align: center; }
+
+  form { display: flex; flex-direction: column; gap: 20px; }
+  input, textarea, select { padding: 15px; font-size: 1rem; border-radius: 10px; border: 1px solid #ccc; width: 100%; transition: all 0.3s; }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: #3cb371; box-shadow: 0 0 10px rgba(60,179,113,0.2); }
+  textarea { resize: vertical; min-height: 150px; }
+
+  .submit-btn {
+    background: #3cb371;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 18px 0;
+    border-radius: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .submit-btn:hover { background: #e63946; transform: scale(1.05); }
+
+  footer { background: #000; color: #fff; text-align: center; padding: 40px 20px; margin-top: 60px; }
+  footer a { color: #3cb371; margin: 0 10px; transition: color 0.3s; }
+  footer a:hover { color: #e63946; }
+
+  @media(max-width:600px) { main { padding: 0 20px; } }
+
+  #other-project-container { display: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">InfoWebConcept</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ÜberUnsweb.html">Über uns</a></li>
+      <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+      <li><a href="ProjektWeb.html">Projekte</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Kontaktieren Sie uns</h1>
+  <p>Starten Sie Ihr Projekt mit uns oder stellen Sie Ihre Fragen. Wir melden uns schnellstmöglich bei Ihnen.</p>
+
+
+<form id="projektForm">
+  <input type="text" id="name" placeholder="Ihr Name" required>
+  <input type="email" id="email" placeholder="E-Mail" required>
+  <input type="text" id="titel" placeholder="Projekt Titel" required>
+  <textarea id="beschreibung" placeholder="Projektbeschreibung" required></textarea>
+  <button type="submit">Projekt anfragen</button>
+</form>
+
+    <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+    <select name="project_type" id="project_type" required>
+      <option value="">Projektart auswählen</option>
+      <option value="Webdesign">Webdesign</option>
+      <option value="Webentwicklung">Webentwicklung</option>
+      <option value="Beratung">Beratung</option>
+      <option value="Sonstiges">Sonstiges</option>
+    </select>
+
+    <div id="other-project-container">
+      <input type="text" name="other_project" placeholder="Bitte Projektart angeben">
+    </div>
+
+    <button type="submit" class="submit-btn">Projekt starten</button>
+  </form>
+</main>
+
+<footer>
+  <p>© 2026 InfoWebConcept. Alle Rechte vorbehalten.</p>
+  <p><a href="index.html">Impressum</a> | <a href="DatenschutzWeb.html">Datenschutz</a> | <a href="InfoWebConcept.html">Home</a></p>
+</footer>
+
+<script>
+document.getElementById("projektForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const projekt = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    titel: document.getElementById("titel").value,
+    beschreibung: document.getElementById("beschreibung").value,
+    datum: new Date().toLocaleString()
+  };
+
+  let projekte = JSON.parse(localStorage.getItem("projekte")) || [];
+  projekte.push(projekt);
+  localStorage.setItem("projekte", JSON.stringify(projekte));
+
+  alert("Projektanfrage wurde gespeichert!");
+  this.reset();
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfoWebConcept</title>
+<link rel="icon" type="image/png" sizes="32x32" href="FavIcon/favicon.ico">
+
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: "Segoe UI", Tahoma, sans-serif; background: #fff; color: #222; line-height: 1.6; }
+
+  a { text-decoration: none; color: inherit; }
+
+  header {
+    background: #000;
+    color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .brand { font-size: 2rem; font-weight: bold; letter-spacing: 1px; }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  nav a {
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+
+  nav a:hover {
+    background: #3cb371; 
+    color: #fff;
+  }
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 30px;
+  }
+
+  .hero-text { flex: 1 1 500px; }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #000;
+    line-height: 1.1;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #3cb371; 
+    color: #fff;
+    transition: all 0.3s;
+  }
+
+  .btn:hover { background: #e63946; } 
+
+  .hero-image { flex: 1 1 450px; }
+
+  .hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+
+  .hero-image img:hover { transform: scale(1.02); }
+
+  section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 30px;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .service-card {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  }
+
+  .service-card h3 { margin-bottom: 15px; color: #000; }
+
+  .service-card p { color: #555; font-size: 1rem; }
+
+  footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  footer a {
+    color: #3cb371;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+
+  footer a:hover { color: #e63946; }
+
+  @media (max-width: 950px) {
+    .hero { flex-direction: column; gap: 50px; }
+    nav ul { flex-direction: column; gap: 15px; margin-top: 10px; }
+    .hero-actions { flex-direction: column; }
+    .services { flex-direction: column; gap: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">InfoWebConcept</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="ÜberUnsweb.html">Über uns</a></li>
+      <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+      <li><a href="ProjektWeb.html">Projekte</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Wir gestalten Webseiten, die beeindrucken</h1>
+      <p>InfoWebConcept entwickelt moderne, elegante und hochprofessionelle Webseiten für Unternehmen, Startups und kreative Projekte.</p>
+      <div class="hero-actions">
+        <a href="dienstleistungen.html" class="btn">Unsere Dienstleistungen</a>
+        <a href="kontakt.html" class="btn">Jetzt Kontakt aufnehmen</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="Bilder/InfoWebConcept-.png" alt="InfoWebConcept" style="width: 400px; height: 400px; margin-left: 100px;">
+    </div>
+  </section>
+
+  <section>
+    <h2>Unsere Dienstleistungen</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Webdesign</h3>
+        <p>Moderne, responsive Webseiten, die Besucher anziehen und Ihre Marke stärken.</p>
+      </div>
+      <div class="service-card">
+        <h3>Webentwicklung</h3>
+        <p>Saubere, performante Websites mit modernem Code, die schnell und sicher laufen.</p>
+      </div>
+      <div class="service-card">
+        <h3>SEO & Marketing</h3>
+        <p>Wir optimieren Ihre Webseite für Suchmaschinen und steigern Ihre Reichweite.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 InfoWebConcept. Alle Rechte vorbehalten.</p>
+  <p>
+    <a href="ImpressumWeb.html">Impressum</a> | 
+    <a href="DatenschutzWeb.html">Datenschutz</a>
+  </p>
+</footer>
+
+</body>
+</html>
